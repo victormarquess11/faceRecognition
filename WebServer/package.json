@@ -1,0 +1,22 @@
+{
+  "name": "loginserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login.js",
+  "dependencies": {
+    "basic-ftp": "^4.6.6",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "formidable": "^2.0.1",
+    "fs": "0.0.1-security",
+    "mv": "^2.1.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
