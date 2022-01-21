@@ -13,7 +13,7 @@ import mysql.connector
 import numpy
 
 
-serverName = '192.168.0.12'
+serverName = '192.168.15.8'
 serverPort = 12000
 
 def startServer():
@@ -32,7 +32,7 @@ def startServer():
             #downloading the imagem from the FTP Server
             error=True
             try:
-                ftp = FTP('192.168.0.12')
+                ftp = FTP(serverName)
                 ftp.login("FTPUser","faceUnlock2021")
                 error=False
             except:
@@ -57,7 +57,7 @@ def startServer():
             #request from database to get the encoded List and names
             try:
                 usersGateDatabase = mysql.connector.connect(
-                    host="172.17.0.2",
+                    host="172.17.0.4",
                     user="root",
                     password="faceUnlock2021",
                     database="gateUsersDatabase"
@@ -95,7 +95,7 @@ def startServer():
                 
         #webserver sending image process and store at database
         if 'SENDING_IMAGE_TO_STORE_FILENAME=' in message.decode():
-            ftp = FTP('192.168.0.12')
+            ftp = FTP(serverName)
             ftp.login("FTPUser","faceUnlock2021")
             filename=message.decode()
             filename=filename[32:]

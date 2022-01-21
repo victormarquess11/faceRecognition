@@ -5,7 +5,7 @@ import RPi.GPIO as gpio
 from ftplib import FTP
 
 #configurations
-serverName = '192.168.0.12'
+serverName = '192.168.15.8'
 serverPort = 12000
 gpio.setmode(gpio.BCM)
 gpio.setup(26, gpio.IN, pull_up_down = gpio.PUD_DOWN)
@@ -41,7 +41,7 @@ def sendImage():
     #connect to FTP server
     error=False
     try:
-        ftp = FTP('192.168.0.12')
+        ftp = FTP(serverName)
         ftp.login("FTPUser","faceUnlock2021")
         ftp.storbinary('STOR NewImageToSend.jpg', image)
         ftp.quit()
