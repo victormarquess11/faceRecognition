@@ -10,7 +10,7 @@ var net = require('net');
 var fs = require('fs');
 
 var connectionLogin = mysql.createConnection({
-	host     : '172.17.0.2',
+	host     : '172.17.0.3',
 	user     : 'root',
 	password : 'faceUnlock2021',
 	database : 'nodelogin'
@@ -21,7 +21,7 @@ connectionLogin.connect(function(err) {
 });
 
 var connectionUSM = mysql.createConnection({
-	host     : '172.17.0.2',
+	host     : '172.17.0.3',
 	user     : 'root',
 	password : 'faceUnlock2021',
 	database : 'gateUsersDatabase'
@@ -220,7 +220,7 @@ async function connectToFTPServerToDeletePicture(filename)
     client.ftp.verbose = false;
     try {
         await client.access({
-            host: "192.168.0.12",
+            host: "192.168.15.8",
             user: "FTPUser",
             password: "faceUnlock2021",
             secure: false
@@ -239,7 +239,7 @@ async function connectToFTPServerToUploadPicture(filename)
     client.ftp.verbose = false;
     try {
         await client.access({
-            host: "192.168.0.12",
+            host: "192.168.15.8",
             user: "FTPUser",
             password: "faceUnlock2021",
             secure: false
@@ -258,7 +258,7 @@ async function connectToFTPServerToDownloadPictures()
     client.ftp.verbose = true
     try {
         await client.access({
-            host: "192.168.0.12",
+            host: "192.168.15.8",
             user: "FTPUser",
             password: "faceUnlock2021",
             secure: false
