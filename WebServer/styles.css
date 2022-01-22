@@ -1,5 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    background: rgb(118, 143, 143);
-    text-align: center;
+    background-color: #DDE5F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.modal {
+    width: 250px;
+    height: fit-content;
+    background-color: #b3dddd;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.modal img {
+    width: 200px;
+}
+
+form {
+    width: 80%;
+}
+
+.input-area,
+.password-area{
+    height: fit-content;
+    background-color: #fafafa;
+    padding: 5px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.input-area p,
+.password-area p {
+    margin: 5px 0px 5px 3px;
+}
+
+.input-area input,
+.password-area input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+}
+
+button {
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 45px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    background-color: #2F453F;
+    color: #fff;
+}
+
+.area-de-baixo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 90px;
+}
+
+.area-de-baixo a {
+    text-decoration: none;
+    color: #333
 }
