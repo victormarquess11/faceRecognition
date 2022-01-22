@@ -3,6 +3,7 @@
 }
 
 body {
+    font-family: 'Outfit', sans-serif;
     background-color: #DDE5F4;
     display: flex;
     justify-content: center;
@@ -11,7 +12,7 @@ body {
 }
 
 .modal {
-    width: 250px;
+    width: 300px;
     height: fit-content;
     background-color: #b3dddd;
     display:flex;
@@ -22,7 +23,7 @@ body {
 }
 
 .modal img {
-    width: 200px;
+    width: 250px;
 }
 
 form {
@@ -31,6 +32,7 @@ form {
 
 .input-area,
 .password-area{
+    font-weight: bold;
     height: fit-content;
     background-color: #fafafa;
     padding: 5px;
@@ -45,6 +47,7 @@ form {
 
 .input-area input,
 .password-area input {
+    padding: 10px;
     border: none;
     background-color: transparent;
     outline: none;
@@ -70,6 +73,7 @@ button {
 }
 
 .area-de-baixo a {
+    font-family: 'Outfit', sans-serif;
     text-decoration: none;
     color: #333
 }
