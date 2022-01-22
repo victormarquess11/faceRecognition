@@ -5,7 +5,7 @@ import RPi.GPIO as gpio
 from ftplib import FTP
 
 #configurations
-serverName = '192.168.15.8'
+serverName = '192.168.15.10'
 serverPort = 12000
 gpio.setmode(gpio.BCM)
 gpio.setup(26, gpio.IN, pull_up_down = gpio.PUD_DOWN)
