@@ -3,7 +3,12 @@
 }
 
 body {
+    zoom: 1.1; 
+    -moz-transform: scale(1.1); 
+    -moz-transform-origin: 0 0;
     font-family: 'Outfit', sans-serif;
+    user-select: none;
+    overflow-y: hidden;
     background-color: #DDE5F4;
     display: flex;
     justify-content: center;
@@ -12,7 +17,7 @@ body {
 }
 
 .modal {
-    width: 300px;
+    width: 300px; 
     height: fit-content;
     background-color: #b3dddd;
     display:flex;
@@ -20,6 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 30px;
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
 }
 
 .modal img {
@@ -37,7 +43,7 @@ form {
     background-color: #fafafa;
     padding: 5px;
     margin-bottom: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .input-area p,

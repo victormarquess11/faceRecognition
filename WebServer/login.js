@@ -13,7 +13,8 @@ var connectionLogin = mysql.createConnection({
 	host     : '172.17.0.3',
 	user     : 'root',
 	password : 'faceUnlock2021',
-	database : 'nodelogin'
+	database : 'nodelogin',
+    port     : 3306
 });
 
 connectionLogin.connect(function(err) {
@@ -21,11 +22,13 @@ connectionLogin.connect(function(err) {
 });
 
 var connectionUSM = mysql.createConnection({
-	host     : '172.17.0.3',
-	user     : 'root',
-	password : 'faceUnlock2021',
-	database : 'gateUsersDatabase'
+    host: '172.17.0.3',
+    user: 'root',
+    password: 'faceUnlock2021',
+    database: 'gateUsersDatabase',
+    port: 3306
 });
+
 
 connectionUSM.connect(function(err) {
   if (err) throw err;
@@ -70,25 +73,7 @@ app.post('/cadastrarUser', function(request, response)
 {
     if (request.session.loggedin)
     {
-        response.write('<!DOCTYPE html>');
-        response.write('<html>');
-            response.write('<head>');
-                response.write('<meta charset="utf-8">')
-                response.write('<title>FaceUnlock add Users</title>')
-            response.write('</head>')
-            response.write('<body>')
-                response.write('<form action="addNewUser" method="post" enctype="multipart/form-data" id="addUserForm">')
-                response.write('<label for="nome">Nome:</label>')
-                response.write('<input type="text" id="nomeAdicionar" name="nomeAdicionar"><br><br>')
-                response.write('<label for="horaUso">Hora de Uso:</label>')
-                response.write('<input type="text" id="horaUso" name="horaUso">')
-                response.write('<input type="file" id="fotoCadastrar" name="fotoCadastrar">')
-                response.write('</form>')
-                response.write('<p>Pressione o botão Submt para cadastrar o usuário ou o botão return para voltar para tela de usuários.</p>')
-                response.write('<button type="submit" form="addUserForm" name="buttAddUserOrReturn" value="Submit">Submit</button>')
-                response.write('<button type="submit" form="addUserForm" name="buttAddUserOrReturn" value="Return">Return</button>')
-            response.write('</body>')
-        response.write('</html>')
+        response.sendFile(path.join(__dirname + '/cadastraruser.html'))
     }
     else
     {
@@ -343,4 +328,4 @@ app.get('/home', function(request, response) {
 
 
 app.listen(3000);
-console.log("WebServer pronto para ouvir")
+console.log("WebServer pronto para ouvir na porta 3000")

@@ -1,6 +1,6 @@
 console.log('Client-side code running');
 
-const button = document.getElementById('login');
+const button = document.getElementById('MyButton');
 button.addEventListener('click', function(e) {
   console.log('button was clicked');
 }); 

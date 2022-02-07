@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+        <html>
+            <head>
+                <meta charset="UTF-8">
+		        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		        <meta name="viewport" content="width=device-width, initial-scale=1.1">
+                <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+		        <link rel="preconnect" href="https://fonts.googleapis.com">
+		        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
+		        <link rel="stylesheet" type="text/css" href="css/reset.css">
+		        <link rel="stylesheet" type="text/css" href="css/style.css">
+                <title>FaceUnlock add Users</title>
+            </head>
+            <body>
+                <form action="addNewUser" method="post" enctype="multipart/form-data" id="addUserForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nomeAdicionar" name="nomeAdicionar"><br><br>
+                <label for="horaUso">Hora de Uso:</label>
+                <input type="text" id="horaUso" name="horaUso">
+                <input type="file" id="fotoCadastrar" name="fotoCadastrar">
+                </form>
+                <p>Pressione o botão Submt para cadastrar o usuário ou o botão return para voltar para tela de usuários.</p>
+                <button type="submit" form="addUserForm" name="buttAddUserOrReturn" value="Submit">Submit</button>
+                <button type="submit" form="addUserForm" name="buttAddUserOrReturn" value="Return">Return</button>
+            </body>
+        </html>
